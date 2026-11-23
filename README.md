@@ -27,7 +27,18 @@ cd black-hole-lab-<version>-x86_64-linux
 
 System-wide: `sudo ./install.sh --prefix /usr/local`. Uninstall: `./install.sh --uninstall`.
 
-Windows builds are planned.
+## Run on Windows (10/11, 64-bit)
+
+Requirements: a GPU with DirectX 12 or Vulkan and an up-to-date graphics driver.
+
+Download `Kerr-<version>-windows-x64.exe` and double-click it. It is a single portable file:
+nothing to install, and it can live in any folder. The `…-x86_64-windows.zip` holds the same exe
+plus a README.
+
+The exe is not code-signed, so Windows SmartScreen warns the first time: choose
+**More info › Run anyway**. Settings and scenes are kept in `%APPDATA%\black-hole-lab\` and
+screenshots (F12) in `Pictures\Kerr\`. To uninstall, delete the exe and those folders. The in-app
+update is Linux-only; on Windows, F1 › About tells you when a new version is out and links to it.
 
 ## Updates
 
