@@ -1,0 +1,60 @@
+name: Bug report
+description: Something does not work, looks wrong or crashes.
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time. The details below help reproduce the problem quickly.
+        If Kerr does not start, the error dialog says why; please copy its text here.
+  - type: input
+    id: version
+    attributes:
+      label: Kerr version
+      description: Shown in F1 › About and updates.
+      placeholder: "0.3.0"
+    validations:
+      required: true
+  - type: dropdown
+    id: os
+    attributes:
+      label: Operating system
+      options:
+        - Linux
+        - Windows 11
+        - Windows 10
+    validations:
+      required: true
+  - type: input
+    id: os-detail
+    attributes:
+      label: Distribution or Windows build
+      placeholder: "Ubuntu 24.04, Arch, Fedora 41, Windows 11 23H2..."
+  - type: input
+    id: gpu
+    attributes:
+      label: Graphics card and driver
+      description: "Linux: the GPU name from `vulkaninfo --summary`. Windows: Device Manager › Display adapters."
+      placeholder: "AMD RX 570 (Mesa 25.1), NVIDIA RTX 3060 (driver 560), Intel Iris Xe..."
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+      description: What you did, what you expected, and what you saw instead.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Open Kerr
+        2. Switch to Kerr (rotating) and set the spin to 0.99
+        3. ...
+  - type: textarea
+    id: media
+    attributes:
+      label: Screenshot or log
+      description: "A screenshot (F12 saves one to Pictures/Kerr) or the terminal output if you started Kerr from a terminal."
